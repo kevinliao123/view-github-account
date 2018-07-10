@@ -9,9 +9,11 @@ import dagger.Component;
 import dagger.android.AndroidInjector;
 import dagger.android.support.AndroidSupportInjectionModule;
 import kevinliao.com.viewgithub.GithubApp;
+import kevinliao.com.viewgithub.data.DataModule;
 
 @Singleton
 @Component(modules = {
+        DataModule.class,
         ApplicationModule.class,
         ActivityBindingModule.class,
         AndroidSupportInjectionModule.class})
