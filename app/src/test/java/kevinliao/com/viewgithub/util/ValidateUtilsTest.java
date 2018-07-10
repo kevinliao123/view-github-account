@@ -15,7 +15,8 @@ public class ValidateUtilsTest {
 
     @Test
     public void isValidatePassword() {
-        assertTrue(ValidateUtils.isValidatePassword("Github1"));
+        assertTrue(ValidateUtils.isValidatePassword("Github11234"));
+        assertFalse(ValidateUtils.isValidatePassword("Github1"));
         assertFalse(ValidateUtils.isValidatePassword("Github"));
         assertFalse(ValidateUtils.isValidatePassword("github1"));
     }

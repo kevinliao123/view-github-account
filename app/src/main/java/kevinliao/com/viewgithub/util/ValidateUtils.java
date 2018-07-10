@@ -11,7 +11,7 @@ public class ValidateUtils {
 
     public static boolean isValidatePassword(String password) {
         return Pattern.compile(
-                "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{4,}$"
+                "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{9,}$"
         ).matcher(password).matches();
     }
 }
