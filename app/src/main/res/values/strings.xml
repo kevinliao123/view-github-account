@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">viewgithub</string>
+    <string name="help">Help</string>
+
+    <!--error message-->
+    <string name="invalid_email">invalid email input</string>
+    <string name="invalid_password">invalid password input</string>
+    <string name="database_insertion_error">fail to save user data</string>
 </resources>
