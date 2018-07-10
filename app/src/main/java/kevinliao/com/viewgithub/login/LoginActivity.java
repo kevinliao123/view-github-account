@@ -86,6 +86,7 @@ public class LoginActivity extends DaggerAppCompatActivity implements LoginContr
     @Override
     public void proceedToNextPage() {
         startActivity(new Intent(this, AccountListActivity.class));
+        finish();
     }
 
     @Override
