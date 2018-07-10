@@ -3,6 +3,7 @@ package kevinliao.com.viewgithub.login;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
@@ -71,9 +72,15 @@ public class LoginActivity extends DaggerAppCompatActivity implements LoginContr
         mPresenter.loginUser(new User(0, email, password));
     }
 
+    @OnClick(R.id.help_text_view)
+    public void onHelpButtonClicked(View view) {
+        showValidationRationale();
+    }
+
     @Override
     public void showValidationRationale() {
-        
+        DialogFragment newFragment = new ValidationRuleDialogFragment();
+        newFragment.show(getSupportFragmentManager(), "validation");
     }
 
     @Override
