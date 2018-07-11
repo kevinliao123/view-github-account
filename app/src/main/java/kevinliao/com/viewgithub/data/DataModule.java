@@ -11,8 +11,7 @@ import dagger.Provides;
 import kevinliao.com.viewgithub.data.local.UserDao;
 import kevinliao.com.viewgithub.data.local.UserDatabase;
 import kevinliao.com.viewgithub.data.local.UserLocalDataSource;
-import kevinliao.com.viewgithub.util.BaseSchedulerProvider;
-import kevinliao.com.viewgithub.util.SchedulerProvider;
+import kevinliao.com.viewgithub.network.GithubService;
 
 @Module
 public abstract class DataModule {
@@ -25,6 +24,12 @@ public abstract class DataModule {
     @Provides
     static UserRepository provideUserRepository(UserLocalDataSource userLocalDataSource) {
         return new UserRepository(userLocalDataSource);
+    }
+
+    @Singleton
+    @Provides
+    static GithubAccountRepository provideGithubRepository(GithubService service) {
+        return new GithubAccountRepository(service);
     }
 
     @Singleton
