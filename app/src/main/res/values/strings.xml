@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">viewgithub</string>
+    <string name="app_name">Github Viewer</string>
     <string name="help">Help</string>
+    <string name="logout">Log Out</string>
     <string name="ok">Ok</string>
 
     <string name="validation_rule_title">Validation Rules</string>
@@ -14,4 +15,9 @@
     <string name="invalid_email">invalid email input</string>
     <string name="invalid_password">invalid password input</string>
     <string name="database_insertion_error">fail to save user data</string>
+    <string name="network_error">fail to download repo data</string>
+
+    <!--key-->
+    <string name="url">url</string>
+    <string name="full_name">full_name</string>
 </resources>

@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.DialogFragment;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -17,7 +16,7 @@ import butterknife.OnClick;
 import butterknife.Unbinder;
 import dagger.android.support.DaggerAppCompatActivity;
 import kevinliao.com.viewgithub.R;
-import kevinliao.com.viewgithub.account.AccountListActivity;
+import kevinliao.com.viewgithub.repolist.RepoListActivity;
 import kevinliao.com.viewgithub.data.local.User;
 
 public class LoginActivity extends DaggerAppCompatActivity implements LoginContract.View {
@@ -85,7 +84,7 @@ public class LoginActivity extends DaggerAppCompatActivity implements LoginContr
 
     @Override
     public void proceedToNextPage() {
-        startActivity(new Intent(this, AccountListActivity.class));
+        startActivity(new Intent(this, RepoListActivity.class));
         finish();
     }
 
